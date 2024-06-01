@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -19,6 +20,11 @@ public class ShooterWTurret  extends SubsystemBase{
     // There is usually only one, but there may be more
     private final CANSparkMax turretRotateMotor;
 
+    // This is for the magnetic switches, they work like digital inputs
+    private final DigitalInput rightSwitch;
+    private final DigitalInput leftSwitch;
+
+
     public ShooterWTurret () {
 
         // Now we define the shooter motor
@@ -26,6 +32,10 @@ public class ShooterWTurret  extends SubsystemBase{
 
         // Then the turret motor
         turretRotateMotor = new CANSparkMax(0, MotorType.kBrushless);
+
+        // Now for the switches
+        rightSwitch = new DigitalInput(0);
+        leftSwitch = new DigitalInput(1);
 
         // Be sure to set  the following  
         //      1. Correct IDs
