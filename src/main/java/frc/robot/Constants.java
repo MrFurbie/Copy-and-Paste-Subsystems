@@ -7,4 +7,9 @@ public final class Constants {
     
     public static final int xboxPort = 0;
 
+    // Motor IDs 
+    // You can store your motor IDs here, however you don't have to
+
+    public static final int exampleMotorID = 0;
+
 }

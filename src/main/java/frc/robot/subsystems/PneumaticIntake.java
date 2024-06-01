@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class PneumaticIntake extends SubsystemBase{
 
+    // Most slap-down intakes have a roller-like feeding system, so for this example we only need one motor
     private final CANSparkMax intakeRoller;
 
     // This inatke has a slap-down intake using pnuematics
@@ -36,6 +37,7 @@ public class PneumaticIntake extends SubsystemBase{
         intakeRoller.set(0.5);
 
         // Feel free to increase or decease the motor speed depending on the situation
+        // Also make sure the motor is spining the right way
 
     }
 
@@ -44,6 +46,7 @@ public class PneumaticIntake extends SubsystemBase{
         intakeRoller.set(-0.5);
 
         // Feel free to increase or decease the motor speed depending on the situation
+        // Also make sure the motor is spining the right way
 
     }
 

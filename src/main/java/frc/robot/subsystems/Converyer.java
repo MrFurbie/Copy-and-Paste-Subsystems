@@ -36,5 +36,6 @@ public class Converyer  extends SubsystemBase{
     }
 
     // We don't need an outake as once it's in the conveyer, it is primed for shooting or wherever it goes
+    // You can feel free to make one however, just as a precaution for oopsies
     
 }
