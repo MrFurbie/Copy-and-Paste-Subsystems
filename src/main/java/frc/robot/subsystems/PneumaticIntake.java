@@ -15,6 +15,7 @@ public class PneumaticIntake extends SubsystemBase{
 
     // This inatke has a slap-down intake using pnuematics
     // For this example, we will say it and the pnuematic control module (PCM) were made by CTRE (Cross the Road Electronics)
+    // This also only has one soleniod, add another if your intake has one
     private final Solenoid intakeSoleniod;
 
     public PneumaticIntake () {
