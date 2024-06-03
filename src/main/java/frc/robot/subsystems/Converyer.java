@@ -19,7 +19,7 @@ public class Converyer  extends SubsystemBase{
         //      1. Correct IDs
         //      2. Smart Limits
         //      3. Burn Flashes
-        //      4. Idle modes
+        //      4. Idle Modes
 
     }
 

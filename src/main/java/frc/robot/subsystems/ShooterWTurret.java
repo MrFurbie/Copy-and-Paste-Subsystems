@@ -4,7 +4,6 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
@@ -41,7 +40,8 @@ public class ShooterWTurret  extends SubsystemBase{
         //      1. Correct IDs
         //      2. Smart Limits
         //      3. Burn Flashes
-        //      4. Idle modes
+        //      4. Idle Modes
+        //      5. Correct Channels
 
     }
 
@@ -68,6 +68,26 @@ public class ShooterWTurret  extends SubsystemBase{
         // Make sure you invert the motor if you need to
         turretRotateMotor.set(-0.3);
 
+    }
+
+    public void setTurretSpeed(double speed) {
+        if (speed > 0) {
+            if (rightSwitch.get()) {
+                // We are going right and right limit is tripped so stop
+                turretRotateMotor.set(0);
+            } else {
+                // We are going right but right limit is not tripped so go at commanded speed
+                turretRotateMotor.set(speed);
+            }
+        } else {
+            if (leftSwitch.get()) {
+                // We are going left and left limit is tripped so stop
+                turretRotateMotor.set(0);
+            } else {
+                // We are going left but left limit is not tripped so go at commanded speed
+                turretRotateMotor.set(speed);
+            }
+        }
     }
 
 }
