@@ -62,14 +62,18 @@ public class PneumaticIntake extends SubsystemBase{
 
     public Command open () {
         return run( () -> {
+            
             intakeSoleniod.set(true);
+            
         });
     }
 
     public Command close () {
         return run( () -> {
+            
             intakeSoleniod.set(false);
             intakeRoller.set(0);
+            
         });
     }
     
